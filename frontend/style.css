@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+}
+
+header p {
+    margin: 0;
+    color: #d1d5db;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-top: 0;
+    color: #111827;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #1f2937;
+}
+
+input,
+select {
+    width: 100%;
+    max-width: 500px;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 25px 0;
+}
+
+/* Dashboard */
+
+section:first-child {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+section:first-child h2 {
+    grid-column: 1 / -1;
+}
+
+section:first-child div {
+    background: #f9fafb;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+section:first-child h3 {
+    font-size: 15px;
+    margin: 0 0 10px;
+}
+
+section:first-child p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Project and Task cards */
+
+#projectList > div,
+#taskList > div {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+#projectList h3,
+#taskList h3 {
+    margin-top: 0;
+}
+
+#projectList p,
+#taskList p {
+    line-height: 1.6;
+}
+
+/* Search and filter */
+
+#projectSearch,
+#taskSearch {
+    margin-bottom: 10px;
+}
+
+#projectFilter,
+#taskFilter {
+    max-width: 300px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    section:first-child {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    section:first-child {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}

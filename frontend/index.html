@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Internship & Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header>
+
+        <h1>Smart Internship & Task Manager</h1>
+
+        <p>
+            Manage your internship projects and tasks easily.
+        </p>
+
+    </header>
+
+
+    <main id="mainContent"></main>
+
+
+  
+
+
+        <!-- ==================== AUTHENTICATION ==================== -->
+
+        <section id="authSection">
+
+            <h2>Account</h2>
+
+
+            <!-- REGISTER -->
+
+            <div>
+
+                <h3>Create Account</h3>
+
+                <form id="registerForm">
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Full Name"
+                        required
+                    >
+
+                    <br><br>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <br><br>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                    <br><br>
+
+                    <button type="submit">
+                        Register
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- LOGIN -->
+
+            <div>
+
+                <h3>Login</h3>
+
+                <form id="loginForm">
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <br><br>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                    <br><br>
+
+                    <button type="submit">
+                        Login
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== DASHBOARD ==================== -->
+
+        <section>
+
+            <h2>Dashboard</h2>
+
+            <div>
+
+                <h3>Total Projects</h3>
+
+                <p id="totalProjects">0</p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Completed Projects</h3>
+
+                <p id="completedProjects">0</p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Pending Projects</h3>
+
+                <p id="pendingProjects">0</p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Total Tasks</h3>
+
+                <p id="totalTasks">0</p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Completed Tasks</h3>
+
+                <p id="completedTasks">0</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== PROJECTS ==================== -->
+
+        <section>
+
+            <h2>Projects</h2>
+
+            <h3>Add New Project</h3>
+
+            <form id="projectForm">
+
+                <input
+                    type="text"
+                    id="projectName"
+                    placeholder="Project Name"
+                    required
+                >
+
+                <br><br>
+
+                <input
+                    type="text"
+                    id="projectDescription"
+                    placeholder="Project Description"
+                    required
+                >
+
+                <br><br>
+
+                <select id="projectStatus">
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="In Progress">
+                        In Progress
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                </select>
+
+                <br><br>
+
+                <select id="projectPriority">
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium" selected>
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+                <br><br>
+
+                <input
+                    type="date"
+                    id="projectDeadline"
+                    required
+                >
+
+                <br><br>
+
+                <button type="submit">
+                    Add Project
+                </button>
+
+            </form>
+
+
+            <hr>
+
+
+            <h3>Search Projects</h3>
+
+            <input
+                type="text"
+                id="projectSearch"
+                placeholder="Search projects..."
+            >
+
+            <br><br>
+
+
+            <select id="projectFilter">
+
+                <option value="All">
+                    All Status
+                </option>
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="In Progress">
+                    In Progress
+                </option>
+
+                <option value="Completed">
+                    Completed
+                </option>
+
+            </select>
+
+            <br><br>
+
+
+            <div id="projectList">
+
+                <p>No projects available.</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== TASKS ==================== -->
+
+        <section>
+
+            <h2>Tasks</h2>
+
+            <h3>Add New Task</h3>
+
+            <form id="taskForm">
+
+                <select id="taskProject" required>
+
+                    <option value="">
+                        Select Project
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Task Title"
+                    required
+                >
+
+                <br><br>
+
+
+                <input
+                    type="text"
+                    id="taskDescription"
+                    placeholder="Task Description"
+                    required
+                >
+
+                <br><br>
+
+
+                <select id="taskStatus">
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="In Progress">
+                        In Progress
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+                <select id="taskPriority">
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium" selected>
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+                <input
+                    type="date"
+                    id="taskDeadline"
+                    required
+                >
+
+                <br><br>
+
+
+                <button type="submit">
+                    Add Task
+                </button>
+
+            </form>
+
+
+            <hr>
+
+
+            <h3>Search Tasks</h3>
+
+            <input
+                type="text"
+                id="taskSearch"
+                placeholder="Search tasks..."
+            >
+
+            <br><br>
+
+
+            <select id="taskFilter">
+
+                <option value="All">
+                    All Status
+                </option>
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="In Progress">
+                    In Progress
+                </option>
+
+                <option value="Completed">
+                    Completed
+                </option>
+
+            </select>
+
+            <br><br>
+
+
+            <div id="taskList">
+
+                <p>No tasks available.</p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
